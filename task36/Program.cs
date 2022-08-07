@@ -11,11 +11,11 @@ int n = Convert.ToInt32(Console.ReadLine());
 int[]array = new int[n];
 int sum = 0;
 for (int i=0; i<n; i++)
-array[i] = new Random().Next(0,101);
+array[i] = new Random().Next(1,11);
 Console.WriteLine("[" + string.Join(",", array) + "]");
 for (int i=0; i<n; i++)
     {
-        if (array[i] % 2 == 1)
+        if (i % 2 == 0)
         sum += array[i];
     }
 Console.WriteLine(sum);

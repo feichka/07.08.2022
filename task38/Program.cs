@@ -6,14 +6,12 @@
 
 Console.WriteLine("Задайте количество элементов массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int[]array = new int[n];
-
+double[]array = new double[n];
 for (int i=0; i<n; i++)
-array[i] = new Random().Next(0,101);
-Console.WriteLine("[" + string.Join(",", array) + "]");
-int max = 0;
-int min = array[n-1];
-//int dif = 0;
+array[i] = new Random().NextDouble();
+Console.WriteLine("[" + string.Join(";", array) + "]");
+double max = 0;
+double min = array[n-1];
 for (int i=0; i<n; i++)
 {
         if (array[i] > max)
@@ -21,10 +19,5 @@ for (int i=0; i<n; i++)
 
         if (array[i] < min)
         min = array[i];
-
-        //dif = max - min;
- }
-
-//Console.WriteLine(max);
-//Console.WriteLine(min);
+}
 Console.WriteLine("Разница между максимальным и минимальным элементом равна " + (max-min));
